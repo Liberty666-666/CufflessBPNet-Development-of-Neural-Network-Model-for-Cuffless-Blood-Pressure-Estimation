@@ -1,0 +1,152 @@
+bp_mamba_sdbp_S_Mamba_bp_S_ft128_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 4419.9204, mae: 61.7207
+MAPE: 0.81%, Correctness: 99.19%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft128_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 4215.3066, mae: 60.5523
+MAPE: 0.83%, Correctness: 99.17%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft128_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: nan, mae: nan
+MAPE: nan%, Correctness: nan%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft128_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 4214.4243, mae: 60.5435
+MAPE: 0.83%, Correctness: 99.17%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft128_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 4214.4243, mae: 60.5435
+MAPE: 0.83%, Correctness: 99.17%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft128_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 4111.0103, mae: 59.4097
+MAPE: 0.82%, Correctness: 99.18%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft128_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 4111.0103, mae: 59.4097
+MAPE: 0.82%, Correctness: 99.18%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft128_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 4392.7041, mae: 61.3093
+MAPE: 0.83%, Correctness: 99.17%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft128_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 3787.7388, mae: 56.9974
+MAPE: 0.77%, Correctness: 99.23%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft128_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 3368.6768, mae: 53.2603
+MAPE: 0.71%, Correctness: 99.29%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft128_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 2963.3950, mae: 49.3733
+MAPE: 0.65%, Correctness: 99.35%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft128_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 2577.2539, mae: 45.3635
+MAPE: 0.59%, Correctness: 99.41%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft128_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 0.9083, mae: 0.8629
+MAPE: 1.57%, Correctness: 98.43%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft128_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 0.9959, mae: 0.8954
+MAPE: 1.54%, Correctness: 98.46%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft128_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 0.6705, mae: 0.7005
+MAPE: 1.13%, Correctness: 98.87%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft1000_sl64_ll96_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 0.7719, mae: 0.7215
+MAPE: 1.44%, Correctness: 98.56%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft1000_sl64_ll96_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 3.5253, mae: 1.6942
+MAPE: 1.02%, Correctness: 98.98%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft1000_sl64_ll96_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 2.0531, mae: 1.0343
+MAPE: 2.11%, Correctness: 97.89%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft1000_sl64_ll96_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 2.0531, mae: 1.0343
+MAPE: 2.11%, Correctness: 97.89%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft1000_sl64_ll96_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 1.8671, mae: 1.1530
+MAPE: 2.85%, Correctness: 97.15%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft1000_sl64_ll96_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 2.6811, mae: 1.0406
+MAPE: 4.93%, Correctness: 95.07%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft1000_sl64_ll96_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 2.5088, mae: 1.0271
+MAPE: 5.46%, Correctness: 94.54%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft1000_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 0.4200, mae: 0.4825
+MAPE: 3.02%, Correctness: 96.98%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft1000_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 0.4200, mae: 0.4825
+MAPE: 3.02%, Correctness: 96.98%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft1000_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 0.4200, mae: 0.4825
+MAPE: 3.02%, Correctness: 96.98%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft1000_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 0.4200, mae: 0.4825
+MAPE: 3.02%, Correctness: 96.98%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft1000_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 1.0555, mae: 0.7832
+MAPE: 12.81%, Correctness: 87.19%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft1000_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 1.0555, mae: 0.7832
+MAPE: 12.81%, Correctness: 87.19%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft1000_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 1.0555, mae: 0.7832
+MAPE: 12.82%, Correctness: 87.18%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft1000_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 3.9095, mae: 1.7881
+MAPE: 1.10%, Correctness: 98.90%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft1000_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 0.5140, mae: 0.5459
+MAPE: 3.79%, Correctness: 96.21%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft1000_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 0.5140, mae: 0.5459
+MAPE: 3.79%, Correctness: 96.21%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft1000_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 0.5140, mae: 0.5459
+MAPE: 3.79%, Correctness: 96.21%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft1000_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 0.5140, mae: 0.5458
+MAPE: 3.79%, Correctness: 96.21%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft1000_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 0.5140, mae: 0.5459
+MAPE: 3.79%, Correctness: 96.21%
+
+bp_transformer_sdbp_Transformer_bp_S_ft1000_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 0.3927, mae: 0.4641
+MAPE: 1.60%, Correctness: 98.40%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft1000_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 0.5140, mae: 0.5459
+MAPE: 3.79%, Correctness: 96.21%
+
+bp_mamba_sdbp_S_Mamba_bp_S_ft1000_sl64_ll1_pl512_dm8_nh2_el1_dl2048_df1_fctimeF_ebTrue_dttest_projection_0
+mse: 0.5140, mae: 0.5459
+MAPE: 3.79%, Correctness: 96.21%
+
