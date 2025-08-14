@@ -10,4 +10,6 @@ The dataset is derived from the [MIMIC-III Waveform Database](https://physionet.
 
 ## How to Start
 
+
 ## Theoretical Supports and Demonstrations 
+Please read the file, [A Brief Demostration of BP Estimation Using MAMBA](https://github.com/Liberty666-666/CufflessBPNet-Development-of-Neural-Network-Model-for-Cuffless-Blood-Pressure-Estimation/blob/main/A%20Brief%20Demostration%20of%20BP%20Estimation%20Using%20MAMBA.docx), to have more information about the working principles of this project, as well as the testing results obtained by us. 
