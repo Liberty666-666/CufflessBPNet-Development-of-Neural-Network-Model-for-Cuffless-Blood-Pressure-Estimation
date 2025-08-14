@@ -7,3 +7,7 @@ We adopted the [S-MAMBA](https://github.com/wzhwzhwzh0921/S-D-Mamba/tree/main?ta
 This work builds upon the [S-D-Mamba codebase](https://github.com/wzhwzhwzh0921/S-D-Mamba), with significant modifications tailored to blood pressure prediction. We gratefully acknowledge [wzhwzhwzh0921](https://github.com/wzhwzhwzh0921) for making their work publicly available.  
 
 The dataset is derived from the [MIMIC-III Waveform Database](https://physionet.org/content/mimic3wdb/1.0/), using raw PPG and arterial blood pressure (ABP) waveforms for training.  
+
+## How to Start
+
+## Theoretical Supports and Demonstrations 
