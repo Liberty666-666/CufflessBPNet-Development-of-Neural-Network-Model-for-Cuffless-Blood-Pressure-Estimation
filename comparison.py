@@ -1,21 +1,35 @@
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 
 def plot_results(results_dir):
-    # Paths to CSV files
+    # Paths to files
     true_csv = os.path.join(results_dir, "testset_true.csv")
     pred_csv = os.path.join(results_dir, "predictions.csv")
+    scaler_file = os.path.join(results_dir, "label_scaler_params.npz")
 
-    # Load data
+    # Load CSVs
     true_df = pd.read_csv(true_csv)
     pred_df = pd.read_csv(pred_csv)
 
-    # Merge for alignment
+    # Denormalize if scaler exists
+    if os.path.exists(scaler_file):
+        params = np.load(scaler_file)
+        mean, scale = params["mean"], params["scale"]
+
+        # Apply inverse transform
+        true_df[["SBP_true", "DBP_true"]] = true_df[["SBP_true", "DBP_true"]] * scale + mean
+        pred_df[["SBP_pred", "DBP_pred"]] = pred_df[["SBP_pred", "DBP_pred"]] * scale + mean
+        print("Data denormalized using saved scaler parameters.")
+    else:
+        print("Scaler file not found. Plotting normalized values.")
+
+    # Merge for plotting
     merged_df = pd.concat([true_df, pred_df], axis=1)
 
     # Plot SBP
-    plt.figure(figsize=(12, 5))
+    plt.figure(figsize=(12, 6))
     plt.subplot(2, 1, 1)
     plt.plot(merged_df["SBP_true"], label="SBP True", color="red")
     plt.plot(merged_df["SBP_pred"], label="SBP Predicted", color="blue", linestyle="--")
@@ -51,4 +65,3 @@ if __name__ == "__main__":
     )
     print(f"Using results from: {latest_subdir}")
     plot_results(latest_subdir)
-
