@@ -8,6 +8,7 @@ from data_provider.data_factory import data_provider
 from experiments.exp_basic import Exp_Basic
 from utils.tools import EarlyStopping, adjust_learning_rate
 from utils.metrics import metric
+import pandas as pd  # NEW
 
 class Exp_Long_Term_Forecast(Exp_Basic):
     def __init__(self, args):
@@ -96,6 +97,7 @@ class Exp_Long_Term_Forecast(Exp_Basic):
         self.model.load_state_dict(torch.load(os.path.join(path, 'checkpoint.pth')))
         return self.model
 
+# ------------------- MODIFIED TEST -------------------
     def test(self, setting, test=0):
         test_data, test_loader = self._get_data('test')
         if test:
@@ -119,7 +121,6 @@ class Exp_Long_Term_Forecast(Exp_Basic):
 
         print(f"Test shape: preds: {preds.shape}, trues: {trues.shape}")
 
-        from utils.metrics import metric
         mae, mse, rmse, mape, mspe = metric(preds, trues)
         correctness = 100 - mape
 
@@ -132,14 +133,23 @@ class Exp_Long_Term_Forecast(Exp_Basic):
         np.save(folder_path + 'true.npy', trues)
         np.save(folder_path + 'metrics.npy', np.array([mae, mse, rmse, mape, mspe]))
 
+        # === NEW: Save CSVs ===
+        test_csv_path = os.path.join(folder_path, 'testset_true.csv')
+        pred_csv_path = os.path.join(folder_path, 'predictions.csv')
+
+        pd.DataFrame(trues, columns=['SBP_true', 'DBP_true']).to_csv(test_csv_path, index=False)
+        pd.DataFrame(preds, columns=['SBP_pred', 'DBP_pred']).to_csv(pred_csv_path, index=False)
+
+        print(f"Ground truth test BP saved at {test_csv_path}")
+        print(f"Predictions saved at {pred_csv_path}")
+
         with open("result_long_term_forecast.txt", 'a') as f:
             f.write(f"{setting}\n")
             f.write(f"mse: {mse:.4f}, mae: {mae:.4f}\n")
             f.write(f"MAPE: {mape:.2f}%, Correctness: {correctness:.2f}%\n\n")
 
         return
-
-
+# -----------------------------------------------------
 
     def predict(self, setting, load=False):
         pred_data, pred_loader = self._get_data('pred')
