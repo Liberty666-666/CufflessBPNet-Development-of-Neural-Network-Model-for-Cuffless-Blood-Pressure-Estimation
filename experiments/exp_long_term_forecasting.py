@@ -8,7 +8,6 @@ from data_provider.data_factory import data_provider
 from experiments.exp_basic import Exp_Basic
 from utils.tools import EarlyStopping, adjust_learning_rate
 from utils.metrics import metric
-import pandas as pd  # NEW
 
 class Exp_Long_Term_Forecast(Exp_Basic):
     def __init__(self, args):
@@ -97,7 +96,7 @@ class Exp_Long_Term_Forecast(Exp_Basic):
         self.model.load_state_dict(torch.load(os.path.join(path, 'checkpoint.pth')))
         return self.model
 
-# ------------------- MODIFIED TEST -------------------
+    # === MODIFIED TEST METHOD ===
     def test(self, setting, test=0):
         test_data, test_loader = self._get_data('test')
         if test:
@@ -129,44 +128,27 @@ class Exp_Long_Term_Forecast(Exp_Basic):
 
         folder_path = f'./results/{setting}/'
         os.makedirs(folder_path, exist_ok=True)
+
+        # Save results
         np.save(folder_path + 'pred.npy', preds)
         np.save(folder_path + 'true.npy', trues)
         np.save(folder_path + 'metrics.npy', np.array([mae, mse, rmse, mape, mspe]))
 
-        # === NEW: Save CSVs ===
-        test_csv_path = os.path.join(folder_path, 'testset_true.csv')
-        pred_csv_path = os.path.join(folder_path, 'predictions.csv')
+        # Save CSVs
+        pd = __import__("pandas")  # avoid top import conflicts
+        pd.DataFrame(trues, columns=["SBP_true", "DBP_true"]).to_csv(folder_path + "testset_true.csv", index=False)
+        pd.DataFrame(preds, columns=["SBP_pred", "DBP_pred"]).to_csv(folder_path + "predictions.csv", index=False)
 
-        pd.DataFrame(trues, columns=['SBP_true', 'DBP_true']).to_csv(test_csv_path, index=False)
-        pd.DataFrame(preds, columns=['SBP_pred', 'DBP_pred']).to_csv(pred_csv_path, index=False)
-
-        print(f"Ground truth test BP saved at {test_csv_path}")
-        print(f"Predictions saved at {pred_csv_path}")
+        # === Save scaler params ===
+        if hasattr(test_data, "label_scaler") and test_data.label_scaler is not None:
+            np.savez(folder_path + "label_scaler_params.npz",
+                     mean=test_data.label_scaler.mean_,
+                     scale=test_data.label_scaler.scale_)
+            print(f"Scaler parameters saved to {folder_path}label_scaler_params.npz")
 
         with open("result_long_term_forecast.txt", 'a') as f:
             f.write(f"{setting}\n")
             f.write(f"mse: {mse:.4f}, mae: {mae:.4f}\n")
             f.write(f"MAPE: {mape:.2f}%, Correctness: {correctness:.2f}%\n\n")
 
-        return
-# -----------------------------------------------------
-
-    def predict(self, setting, load=False):
-        pred_data, pred_loader = self._get_data('pred')
-        if load:
-            best_model_path = os.path.join(self.args.checkpoints, setting, 'checkpoint.pth')
-            self.model.load_state_dict(torch.load(best_model_path))
-
-        preds = []
-        self.model.eval()
-        with torch.no_grad():
-            for batch_x, _, *_ in pred_loader:
-                batch_x = batch_x.float().to(self.device)
-                outputs = self.model(batch_x)
-                preds.append(outputs.detach().cpu().numpy())
-
-        preds = np.concatenate(preds, axis=0)
-        folder_path = f'./results/{setting}/'
-        os.makedirs(folder_path, exist_ok=True)
-        np.save(folder_path + 'real_prediction.npy', preds)
         return
