@@ -40,7 +40,7 @@ def plot_results(results_dir):
     plt.savefig(save_path, dpi=300)
     plt.close()
 
-    print(f"✅ Plot saved at: {save_path}")
+    print(f"Plot saved at: {save_path}")
 
 if __name__ == "__main__":
     results_root = "./results"
@@ -49,6 +49,6 @@ if __name__ == "__main__":
         [os.path.join(results_root, d) for d in os.listdir(results_root)],
         key=os.path.getmtime
     )
-    print(f"📂 Using results from: {latest_subdir}")
+    print(f"Using results from: {latest_subdir}")
     plot_results(latest_subdir)
 
